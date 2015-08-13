@@ -40,7 +40,7 @@ class Phonebook
     end
     found_phonebook
   end
-  define_method(:add_friend) do |friend|
-    @contacts.push(friend)
-  end
+  # define_method(:add_contact) do |contact|
+  #   @contacts.push(contact)
+  # end
 end

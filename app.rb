@@ -68,6 +68,6 @@ post('/contacts') do
   @contact = Contact.new({:first_name => first_name, :last_name => last_name, :company => company, :job_title => job_title, :email => email, :phone_number => phone_number, :phone_type => phone_type, :street_address => street_address, :city => city, :state => state, :zip_code => zip_code, :building_type => building_type})
   @contact.save()
   # @contacts = Contact.all()
-  @phonebook.add_friend(@contact)
+  # @phonebook.add_contact(@contact)
   erb(:contact)
 end
