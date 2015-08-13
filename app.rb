@@ -11,3 +11,8 @@ end
 get('/phonebooks/new') do
   erb(:phonebooks_form)
 end
+
+get('/phonebooks') do
+  @phonebooks = Phonebook.all()
+  erb(:phonebooks)
+end

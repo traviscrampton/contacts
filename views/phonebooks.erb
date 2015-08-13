@@ -1,0 +1,6 @@
+<h1>Phonebooks</h1>
+<ul>
+  <% @phonebooks.each() do |phonebook| %>
+  <li><a href="/phonebooks/<%= phonebook.id() %>"><%= phonebook.name() %></a></li>
+  <% end %>
+</ul>
