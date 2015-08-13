@@ -23,6 +23,7 @@ class Contact
     @id
   end
 
+
   define_singleton_method(:all) do
     @@contacts
   end
