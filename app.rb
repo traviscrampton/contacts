@@ -3,6 +3,7 @@ require('sinatra/reloader')
 also_reload('lib/**/*.rb')
 require('./lib/contact')
 require('./lib/phonebook')
+require('pry')
 
 get('/') do
   erb(:index)
@@ -18,10 +19,10 @@ get('/phonebooks') do
 end
 
 post('/phonebooks') do
-  name = params.fetch('name')
-  Phonebook.new(name).save()
+  name = params.fetch("name")
+  Phonebook.new({:name => name}).save()
   @phonebooks = Phonebook.all()
-  erb(:success)
+  erb(:phonebooks)
 end
 
 get('contacts/:id') do

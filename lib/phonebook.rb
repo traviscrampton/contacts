@@ -1,11 +1,18 @@
+require('pry')
+
 class Phonebook
   attr_reader(:name)
   @@phonebooks = []
 
   define_method(:initialize) do |attributes|
+    # binding.pry
     @name = attributes.fetch(:name)
     @id = @@phonebooks.length().+1
     @contacts=[]
+  end
+
+  define_method(:contacts) do
+    @contacts
   end
 
   define_method(:id) do
