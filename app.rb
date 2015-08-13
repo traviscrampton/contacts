@@ -51,3 +51,23 @@ get('/phonebooks/:id/contacts/new') do
   @phonebook = Phonebook.find(params.fetch('id').to_i())
   erb(:phonebook_contacts_form)
 end
+
+post('/contacts') do
+  first_name = params.fetch("first_name")
+  last_name = params.fetch("first_name")
+  company = params.fetch("company")
+  job_title = params.fetch("job_title")
+  email = params.fetch("email")
+  phone_number = params.fetch("phone_number")
+  phone_type = params.fetch("phone_type")
+  street_address = params.fetch("street_address")
+  city = params.fetch("city")
+  state = params.fetch("state")
+  zip_code = params.fetch("zip_code")
+  building_type = params.fetch("building_type")
+  @contact = Contact.new({:first_name => first_name, :last_name => last_name, :company => company, :job_title => job_title, :email => email, :phone_number => phone_number, :phone_type => phone_type, :street_address => street_address, :city => city, :state => state, :zip_code => zip_code, :building_type => building_type})
+  @contact.save()
+  # @contacts = Contact.all()
+  @phonebook.add_friend(@contact)
+  erb(:contact)
+end
