@@ -40,3 +40,13 @@ get('contacts/:id') do
   @building_type = @Contacts.building_type()
   erb(:contact)
 end
+
+get('/phonebooks/:id') do
+  @phonebook = Phonebook.find(params.fetch('id').to_i())
+  erb(:phonebook)
+end
+
+get('/phonebooks/:id/contacts/new') do
+  @phonebook = Phonebook.find(params.fetch('id').to_i())
+  erb(:phonebook_contacts_form)
+end
