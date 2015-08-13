@@ -4,7 +4,7 @@ class Phonebook
 
   define_method(:initialize) do |attributes|
     @name = attributes.fetch(:name)
-    @id = @@phonebooks.length(). +1
+    @id = @@phonebooks.length().+1
     @contacts=[]
   end
 
