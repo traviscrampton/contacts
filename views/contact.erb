@@ -1,24 +1,26 @@
 <h1>Contact information</h1>
 
 <p>
-  Name: <%= @contact.first_name() %> <%= @last_name %>
+  Name: <%= @contact.first_name() %> <%= @contact.last_name() %>
   <br>
-  Company: <%= @company %>
+  Company: <%= @contact.company() %>
   <br>
-  Job Title: <%= @job_title %>
+  Job Title: <%= @contact.job_title() %>
   <br>
-  Email: <%= @email  %>
+  Email: <%= @contact.email()  %>
   <br>
-  Phone Number: <%= @phone_number  %> <%= @phone_type  %>
+  Phone Number: <%= @contact.phone_number()  %> <%= @contact.phone_type()  %>
   <br>
-  Street Address: <%= @street_address  %>
+  Street Address: <%= @contact.street_address()  %>
   <br>
-  City: <%= @city  %>
+  City: <%= @contact.city()  %>
   <br>
-  State: <%= @state  %>
+  State: <%= @contact.state()  %>
   <br>
-  Zip Code: <%= @zip_code  %>
+  Zip Code: <%= @contact.zip_code()  %>
   <br>
-  Type of Building: <%= @building_type  %>
+  Type of Building: <%= @contact.building_type()  %>
 
 </p>
+
+<a href="/phonebooks">Back To Your Contact list</a>
